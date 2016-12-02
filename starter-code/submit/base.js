@@ -5,5 +5,15 @@ var rick_roll_youtube_embed_code = "<iframe width='420' height='315' src='https:
 $(document).ready(function(){
 
   $("#time").text( Date.now() );
+  $( "form" ).submit(function( event ) {
+    event.preventDefault();
+  $("form").on("click", addVideo);
+
+});
+
+function addVideo(){
+  $( "form" ).append('<div>' + rick_roll_youtube_embed_code +
+  '</div>');
+}
 
 })
